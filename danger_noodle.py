@@ -94,6 +94,8 @@ class MainApplication(tk.Frame):
                 self.animated = True
         elif event.keysym == 'q':
             self.parent.destroy()
+        elif event.keysym == 'p':
+            self.animated = False
         elif event.keysym == 'r':
             self.reset()
 
