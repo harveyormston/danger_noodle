@@ -9,7 +9,7 @@ from setuptools import setup
 
 APP = ['danger_noodle.py']
 DATA_FILES = []
-OPTIONS = {'iconfile': '/Users/harvey/git/snake_game/danger_noodle.icns'}
+OPTIONS = {'iconfile': 'danger_noodle.icns'}
 
 setup(
     app=APP,
