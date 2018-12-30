@@ -43,6 +43,7 @@ class MainApplication(tk.Frame):
     def reset(self):
 
         self.animated = False
+        self.parent.config(cursor='')
 
         self.direction = (0, 0)
         self.next_direction = (0, 0)
@@ -63,11 +64,13 @@ class MainApplication(tk.Frame):
 
         self.canvas.configure(background="green")
         self.animated = False
+        self.parent.config(cursor='')
 
     def stop(self):
 
         self.canvas.configure(background="red")
         self.animated = False
+        self.parent.config(cursor='')
 
     def start(self):
 
@@ -96,6 +99,7 @@ class MainApplication(tk.Frame):
             self.parent.destroy()
         elif event.keysym == 'p':
             self.animated = False
+            self.parent.config(cursor='')
         elif event.keysym == 'r':
             self.reset()
 
@@ -129,6 +133,8 @@ class MainApplication(tk.Frame):
     def animate(self):
 
         if self.animated:
+
+            self.parent.config(cursor='none')
 
             if self.pickup is None:
                 self.add_pickup()
