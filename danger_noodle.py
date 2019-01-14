@@ -79,19 +79,19 @@ class MainApplication(tk.Frame):
     def keypress(self, event):
 
         drx, dry = self.direction
-        if event.keysym == 'Right':
+        if event.keysym == 'Right' or event.keysym == 'l':
             if drx != -PXL:
                 self.next_direction = (PXL, 0)
                 self.animated = True
-        elif event.keysym == 'Left':
+        elif event.keysym == 'Left' or event.keysym == 'h':
             if drx != PXL:
                 self.next_direction = (-PXL, 0)
                 self.animated = True
-        elif event.keysym == 'Up':
+        elif event.keysym == 'Up' or event.keysym == 'k':
             if dry != PXL:
                 self.next_direction = (0, -PXL)
                 self.animated = True
-        elif event.keysym == 'Down':
+        elif event.keysym == 'Down' or event.keysym == 'j':
             if dry != -PXL:
                 self.next_direction = (0, PXL)
                 self.animated = True
